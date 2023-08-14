@@ -3,12 +3,14 @@ import { Button } from './Button';
 
 interface SearchProps{
     placeholder?: string;
-    type: string
+    type: string;
+    onClick?: () => string;
 }
 
 const Search: React.FC<SearchProps> = ({type,placeholder}) => {
+
   return (
-<form className='rounded-lg outline-none focus-within:outline-1 focus-within:outline-gray-400 focus-within:outline-offset-0'>
+<form className='box-border border-gray-300 rounded-lg border-[1px]'>
   <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
     Search
   </label>

@@ -26,13 +26,13 @@ const Pokemons = () => {
     }, [pokemonLimit])
 
     const loadMore = () => {
-        setPokemonLimit(prev => prev + 21);
+        return setPokemonLimit(prev => prev + 21);
     }
 
     return (
         <div>
             <div className='flex flex-col mb-10 xl:justify-between xl:flex-row gap-y-8'>
-                <Search type='text' placeholder='Search...'/>
+                <Search type='text' placeholder='Search...' />
                 <Sort options={FilterOptions}/>
             </div>
 
