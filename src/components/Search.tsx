@@ -10,7 +10,7 @@ interface SearchProps{
 const Search: React.FC<SearchProps> = ({type,placeholder}) => {
 
   return (
-<form className='box-border border-gray-300 rounded-lg border-[1px]'>
+<form className='w-full rounded-lg focus:border-red-500 focus:border-b-2'>
   <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
     Search
   </label>
@@ -35,13 +35,11 @@ const Search: React.FC<SearchProps> = ({type,placeholder}) => {
     <input
       type={type}
       id="search"
-      className="block w-full p-2 pl-10 rounded-lg focus:outline-none"
+      className="block w-full p-2 pl-10 bg-transparent border-b-2 border-gray-300 outline-none focus:duration-500 focus:border-red-500 hover:border-red-500 hover:duration-500 hover:ease-in-out focus:ease-in-out"
       placeholder={placeholder}
       required
+      autoComplete='off'
     />
-    <Button type="submit" size='sm' className="focus:opacity-80">
-      Search
-    </Button>
   </div>
 </form>
 

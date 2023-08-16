@@ -2,23 +2,23 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import './App.css';
-import Header from './components/Header';
 import Pokemons from './pages/Pokemons';
 import PokemonDetail from './pages/PokemonDetail';
+import Header from './components/Header';
 
 function App() {
   return (
-    <>
+    <div className='font-sans'>
     <Header />
     <main className='max-w-[1280px] p-12 mx-auto'>   
       <Routes>
-      <Route path='/' element={<Home />}/>
+      {/* <Route path='/' element={<Home />}/> */}
       <Route path='/about' element={<About/>}/>
-      <Route path='/pokemons' element={<Pokemons/>}/>
+      <Route path='/' element={<Pokemons/>}/>
       <Route path='/pokemons/:id' element={<PokemonDetail/>}/>
      </Routes>
      </main> 
-    </>
+    </div>
   )
 }
 
