@@ -4,8 +4,7 @@ import About from './pages/About';
 import './App.css';
 import Header from './components/Header';
 import Pokemons from './pages/Pokemons';
-
-
+import PokemonDetail from './pages/PokemonDetail';
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
       <Route path='/' element={<Home />}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/pokemons' element={<Pokemons/>}/>
+      <Route path='/pokemons/:id' element={<PokemonDetail/>}/>
      </Routes>
      </main> 
     </>
