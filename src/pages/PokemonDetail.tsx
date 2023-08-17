@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Loading from '../components/Loading';
 
 const PokemonDetail = () => {
     const [details, setDetails] = useState([]);
@@ -25,48 +26,31 @@ const PokemonDetail = () => {
   
     return (
         <>
-            {loading ? "Loading..." : 
-            <div className='flex flex-col items-center'>
-                <div className='mb-16'>
-                    <h2 className='text-4xl capitalize'>
-                        {details.name}
-                    </h2>
-                </div>
+            {loading ? <Loading /> : 
+            <div>
                 <div>
-                <div className='flex gap-32'>
                     <div>
-                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${details?.id}.svg`} alt="" />
+                    <img
+                    className='h-[150px] w-full mb-6'
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${details?.id}.svg`}
+                    alt={`${details.name} image`} />
                     </div>
-                    <div className='flex p-6 bg-blue-500 rounded-lg h-fit'>
-                        <div className='flex gap-20'>
-                            <div>
-                                <p className='mb-2 text-xl text-white'>
-                                    Height
-                                </p>
-                                <p className='text-xl text-center'>
-                                    {details.height}
-                                </p>
-                            </div>
-                            <div>
-                                <p className='mb-2 text-xl text-white'>
-                                    Weight
-                                </p>
-                                <p className='text-xl text-center'>
-                                    {details.weight}
-                                </p>
-                            </div>
+                    <div>
+                        <div>
+                            <button>About</button>
+                            <button>Stats</button>
+                            <button>Evolution</button>
                         </div>
-                        <div className='flex'>
-
-                        </div>
-                        <div className='flex'>
-
+                        <div>
+                            <div>
+                                Stats
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
-                
-            </div>}
+            </div>
+
+}
         </>
   )
 }

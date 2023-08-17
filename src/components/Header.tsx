@@ -1,6 +1,6 @@
 import React from 'react'
 // import Pokeball from "../assets/pokeBall.svg"
-import Pokeball from "../assets/tr.svg"
+import Pokeball from "../assets/pokeball.png"
 
 const Header = () => {
   return (

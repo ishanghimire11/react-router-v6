@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pokemon } from '../types/Pokemon';
 import SingularPokemon from '../components/SingularPokemon';
 import Search from '../components/Search';
-import Sort from '../components/Sort';
+import GithubIcon from "../assets/github.svg"
 import { Button } from '../components/Button';
 import Loading from '../components/Loading';
 
@@ -33,9 +33,11 @@ const Pokemons = () => {
         <>
         {isLoading ? <Loading /> :
         <div>
+            <div className='flex items-center gap-4 mb-8'>
+                <p className='text-6xl font-medium'>Pokedex</p><a href="#"><img src={GithubIcon} alt="" /></a>
+            </div>
             <div className='flex flex-col mb-16 xl:justify-between xl:flex-row gap-y-8'>
                 <Search type='text' placeholder='Search...' />
-                {/* <Sort options={FilterOptions}/> */}
             </div>
 
             <div className='grid grid-cols-1 gap-10 xl:grid-cols-3 xl:gap-8 lg:grid-cols-2 lg:gap-10'>

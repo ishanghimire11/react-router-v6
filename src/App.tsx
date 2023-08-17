@@ -8,9 +8,9 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className='font-sans'>
+    <div className= 'font-handjet'>
     <Header />
-    <main className='max-w-[1280px] p-12 mx-auto'>   
+    <main className='max-w-[1340px] p-12 mx-auto'>   
       <Routes>
       {/* <Route path='/' element={<Home />}/> */}
       <Route path='/about' element={<About/>}/>
