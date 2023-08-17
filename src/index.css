@@ -2,27 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-/* Set background color */
-body {
-    background-color: #f0f0f0;
-}
-
-/* Create the grainy background effect */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('https://mcdn.wallpapersafari.com/medium/90/37/nY3MpS.jpg'); /* Replace with actual path */
-    opacity: 0.1; /* Adjust opacity as needed */
-    pointer-events: none; /* Allow interactions with content underneath */
 }
